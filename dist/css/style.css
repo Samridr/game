@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header .nav {
+  width: 90%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 15px;
+  align-content: center;
+  align-items: center;
+}
+header .nav__logo {
+  float: left;
+}
+header .nav__logo span {
+  color: red;
+  font-size: 50px;
+}
+header .nav__logo span img {
+  width: 40px;
+  height: 35px;
+}
+header .nav__menu {
+  text-align: center;
+  justify-content: baseline;
+}
+header .nav ul {
+  display: flex;
+}
+header .nav ul li {
+  display: flex;
+  list-style: none;
+}
+header .nav ul li .btn {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: none;
+  width: 170px;
+  height: 40px;
+}
+header .nav ul li a {
+  margin: auto;
+  color: inherit;
+  text-decoration: none;
+  color: #000000;
+  padding: 0px 25px;
+}
+header .nav ul li a,
+header .nav ul li a:hover,
+header .nav ul li a:focus,
+header .nav ul li a:active {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+header .nav ul li a:hover {
+  color: red;
+}
+
+.principale {
+  padding-inline: 85px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.principale .principale__img {
+  position: relative;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.principale .principale__img--description {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  color: white;
+}
+.principale .principale__img--description .texte {
+  width: 50%;
+}
+.principale .principale__img--description .texte h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.principale .principale__img--description .texte .imgbtn {
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 170px;
+  height: 40px;
+}
+.principale .principale__img img {
+  border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 80vh;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  color: red;
+  font-weight: bold;
+  padding-bottom: 40px;
+}/*# sourceMappingURL=style.css.map */
