@@ -167,6 +167,7 @@ position: absolute;
     box-shadow: 1px 1px 10px rgba(0, 0, 0,0.2);
     justify-content: space-between;
     font-size: 10px;
+    margin-bottom: 30px;
 
     &__check{
     input{
@@ -197,7 +198,7 @@ position: absolute;
     &__close{
         display: flex;
         justify-content: flex-end;
-        padding-bottom: 10px ;
+        padding-bottom: 5px ;
     }
 
     &__personnel{
@@ -211,7 +212,7 @@ position: absolute;
 
         input{
             width: 100%;
-            height: 30px;
+            height: 25px;
             border-radius: 5px;
             border: none;
         }
