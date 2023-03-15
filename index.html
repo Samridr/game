@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
 
@@ -34,18 +35,83 @@
                 <p>Vous aimez jouer?Notre prochain</p>
                 <p>evenement gaming est ouvert aux</p>
                 <p>reservations... Places limitées!</p><br><br>
-                <button class="imgbtn">Je m'inscris</button>  
+                <button class="imgbtn">Je M'inscris</button>  
               </div>
             </div>
 
+            <div class="wrapper">
+                <div class="from-box">
+                
+                    <form action="#">
+                        <div class="name-field">
+                            <div class="name-field__close">
+                                <i class="fa-solid fa-xmark quit_form"></i>
+                              </div>
+                            <div class="name-field__personnel">
+                                <label for="prenom">Prenom</label>
+                                <input type="text" required placeholder="Votre prenom">
+                            </div>
+                            <div class="name-field__personnel">
+                                <label for="nom">Nom</label>
+                                <input type="text" required placeholder="Votre nom">
+                            </div>
+                            <div class="name-field__personnel">
+                                <label for="email">Email</label>
+                                <input type="email" required placeholder="Votre email">
+                            </div>
+                            <div class="name-field__personnel">
+                                <label for="date_de_naissance">Date de naissance</label>
+                                <input type="date" required placeholder="date de naissance">
+                            </div>
+                            <div class="name-field__personnel">
+                                <label for="prenom">A combien de tournoi GameOn avez vous participé</label>
+                                <input type="number">
+                            </div>
+                            <div class="name-field__radiobtn">
+                                <label for="prenom">A quelle tournoi souhaitez-vous participer cette année</label><br>
+                                <input type="radio" required>
+                                <label for="newyork">New-york</label>
+                                <input type="radio" required>
+                                <label for="Sanfancisco">San-fancisco</label>
+                                <input type="radio" required>
+                                <label for="Seatles">Seatles</label>
+                                <input type="radio" required>
+                                <label for="Chicago">Chicago</label>
+                                <input type="radio" required>
+                                <label for="Boston">Boston</label>
+                                <input type="radio" required>
+                                <label for="Portland">Portland</label>
+                            </div>
+                            <div class="name-field__check">
+                                <input type="checkbox">
+                                <label for="conditions">J'ai lu et accepté les conditions d'utilisations</label><br>
+                                <input type="checkbox">
+                                <label for="evenement">Je souhaite être prevenu des prochains évenements</label>
+                            </div>
+                            <div class="name-field__btn">
+                                <input type="submit" value="C'est partie">
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            
            <img src="images/img1.png" alt="principale">
         </div>
 
+
+       
+
     </section>
+
+    <!-- <section class="wrapper">
+ 
+    </section> -->
 
     <footer>
         <p > Copyright2014-2022, GameOn Inc.</p>
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>
