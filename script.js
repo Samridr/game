@@ -1,14 +1,23 @@
 const wrapper = document.querySelector('.wrapper');
-const btnPopup = document.querySelector('.imgbtn');
+const btnPopup = document.querySelectorAll('.imgbtn');
 const iconeClose = document.querySelector('.name-field__close');
+const sec = document.querySelector('.principale');
+const sec2 = document.querySelector('.principale2');
 
-btnPopup.addEventListener('click', ()=> {
+
+
+btnPopup.forEach(button => button.addEventListener('click', ()=> {
     wrapper.classList.add('active');
+    sec.classList.add("dsp-none");
+    sec2.classList.add("dsp-none");
+    console.log("click");
 }
-);
+));
 
 iconeClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
+    sec.classList.remove("dsp-none");
+    sec2.classList.remove("dsp-none");
 }
 );
 

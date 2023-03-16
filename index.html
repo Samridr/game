@@ -22,9 +22,77 @@
                     <li><a href="#">A propos</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Evènement passé</a></li>
-                </ul></div>
+                </ul>
+              </div>
         </nav>
     </header>
+
+    <div class="wrapper">
+      <div class="from-box">
+      
+          <form action="#" id="inscription">
+              <div class="name-field">
+                  <div class="name-field__close">
+                    <i class="fa-solid fa-xmark quit_form"></i>
+                  </div>
+                  <div class="name-field__personnel">
+                    <label for="prenom">Prenom</label>
+                    <input type="text" placeholder="Votre prenom" id="prenom">
+                    <span class="error-message" id="prenom-error"></span>
+                  </div>
+                  <div class="name-field__personnel">
+                    <label for="nom">Nom</label>
+                    <input type="text" placeholder="Votre nom" id="nom">
+                    <span class="error-message" id="nom-error"></span>
+                  </div>
+                  <div class="name-field__personnel">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Votre email" id="email">
+                    <span class="error-message" id="email-error"></span>
+                  </div>
+                  <div class="name-field__personnel">
+                    <label for="dateNaiss">Date de naissance</label>
+                    <input type="date" placeholder="date de naissance" id="dateNaiss">
+                    <span class="error-message" id="dateNaiss-error"></span>
+                  </div>
+                  <div class="name-field__personnel">
+                    <label for="nbrPart">A combien de tournoi GameOn avez vous participé</label>
+                    <input type="number" id="nbrPart">
+                    <span class="error-message" id="nbrPart-error"></span>
+                  </div>
+              
+                  <div class="name-field__radiobtn">
+                      <label for="participation">A quelle tournoi souhaitez-vous participer cette année</label><br>
+                      <input type="radio" name="city" required>
+                      <label for="newyork">New-york</label>
+                      <input type="radio" name="city">
+                      <label for="Sanfancisco">San-fancisco</label>
+                      <input type="radio" name="city">
+                      <label for="Seatles">Seatles</label>
+                      <input type="radio" name="city">
+                      <label for="Chicago">Chicago</label>
+                      <input type="radio" name="city">
+                      <label for="Boston">Boston</label>
+                      <input type="radio" name="city">
+                      <label for="Portland">Portland</label>
+                  </div>
+                  <div class="name-field__check">
+                      <input type="checkbox" required>
+                      <label for="conditions">J'ai lu et accepté les conditions d'utilisations</label><br>
+                      <input type="checkbox">
+                      <label for="evenement">Je souhaite être prevenu des prochains évenements</label>
+                  </div>
+                  <div class="name-field__btn">
+                      <input type="submit" value="C'est partie">
+                  </div>
+              </div>
+              <p style="color: red;" id="erreur-message"></p>
+
+          </form>
+         
+
+      </div>
+  </div>
 
     <section class="principale">
         <div class="principale__img">
@@ -39,73 +107,30 @@
               </div>
             </div>
 
-            <div class="wrapper">
-                <div class="from-box">
-                
-                    <form action="#" id="inscription">
-                        <div class="name-field">
-                            <div class="name-field__close">
-                              <i class="fa-solid fa-xmark quit_form"></i>
-                            </div>
-                            <div class="name-field__personnel">
-                              <label for="prenom">Prenom</label>
-                              <input type="text" placeholder="Votre prenom" id="prenom">
-                              <span class="error-message" id="prenom-error"></span>
-                            </div>
-                            <div class="name-field__personnel">
-                              <label for="nom">Nom</label>
-                              <input type="text" placeholder="Votre nom" id="nom">
-                              <span class="error-message" id="nom-error"></span>
-                            </div>
-                            <div class="name-field__personnel">
-                              <label for="email">Email</label>
-                              <input type="email" placeholder="Votre email" id="email">
-                              <span class="error-message" id="email-error"></span>
-                            </div>
-                            <div class="name-field__personnel">
-                              <label for="dateNaiss">Date de naissance</label>
-                              <input type="date" placeholder="date de naissance" id="dateNaiss">
-                              <span class="error-message" id="dateNaiss-error"></span>
-                            </div>
-                            <div class="name-field__personnel">
-                              <label for="nbrPart">A combien de tournoi GameOn avez vous participé</label>
-                              <input type="number" id="nbrPart">
-                              <span class="error-message" id="nbrPart-error"></span>
-                            </div>
-                        
-                            <div class="name-field__radiobtn">
-                                <label for="participation">A quelle tournoi souhaitez-vous participer cette année</label><br>
-                                <input type="radio" name="city" required>
-                                <label for="newyork">New-york</label>
-                                <input type="radio" name="city">
-                                <label for="Sanfancisco">San-fancisco</label>
-                                <input type="radio" name="city">
-                                <label for="Seatles">Seatles</label>
-                                <input type="radio" name="city">
-                                <label for="Chicago">Chicago</label>
-                                <input type="radio" name="city">
-                                <label for="Boston">Boston</label>
-                                <input type="radio" name="city">
-                                <label for="Portland">Portland</label>
-                            </div>
-                            <div class="name-field__check">
-                                <input type="checkbox" required>
-                                <label for="conditions">J'ai lu et accepté les conditions d'utilisations</label><br>
-                                <input type="checkbox">
-                                <label for="evenement">Je souhaite être prevenu des prochains évenements</label>
-                            </div>
-                            <div class="name-field__btn">
-                                <input type="submit" value="C'est partie">
-                            </div>
-                        </div>
-                        <p style="color: red;" id="erreur-message"></p>
-
-                    </form>
-                   
-
-                </div>
-            </div>
+           
            <img src="images/img1.png" alt="principale">
+        </div>
+
+
+       
+
+    </section>
+
+    <section class="principale2">
+      <div class="principale2__description">
+        <div class="texte">
+          
+          <h1>Maraton national de jeux videos</h1><br><br>
+          <p>Vous aimez jouer?Notre prochain evenement gaming est ouvert aux
+             reservations... Places limitées!</p>
+          <br><br>
+          <img src="images/img2.png" alt="principale2">
+
+          <button class="imgbtn">Je M'inscris</button>  
+        </div>
+      </div>
+        <div class="principale__img">
+
         </div>
 
 
