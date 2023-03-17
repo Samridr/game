@@ -7,6 +7,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -19,6 +23,9 @@ header .nav {
   padding-block: 15px;
   align-content: center;
   align-items: center;
+}
+header .nav__mobile {
+  display: none;
 }
 header .nav__logo {
   float: left;
@@ -117,7 +124,7 @@ header .nav ul li a:hover {
 }
 
 .wrapper.active {
-  width: 110%;
+  width: 100%;
   height: 105%;
   transform: scale(1);
 }
@@ -137,7 +144,6 @@ header .nav ul li a:hover {
   display: flex;
   flex-direction: column;
   background-color: #000000;
-  width: 75%;
   height: 575px;
   color: white;
   padding: 10px;
@@ -207,6 +213,65 @@ footer {
   .nav__menu {
     display: none;
   }
+  header .nav #check:checked ~ ul {
+    left: 0;
+    z-index: 1;
+  }
+  header .nav .checkbutton {
+    display: flex;
+    font-size: 40px;
+    color: rgb(255, 0, 0);
+    float: right;
+  }
+  header .nav #check {
+    display: none;
+  }
+  header .nav__logo span {
+    color: red;
+    font-size: 40px;
+  }
+  header .nav__logo span img {
+    width: 36px;
+    height: 28px;
+  }
+  header .nav__mobile {
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    float: right;
+  }
+  header .nav__mobile ul {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+    position: fixed;
+    width: 100%;
+    height: 90vh;
+    background-color: pink;
+    top: 100px;
+    left: -110%;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .nav__mobile ul li {
+    display: block;
+    line-height: 100px;
+    margin: 0 5px;
+  }
+  header .nav__mobile ul li .btn {
+    width: 250px;
+    height: 73px;
+    font-size: 30px;
+  }
+  header .nav__mobile ul li a {
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
   .principale2 {
     display: flex;
     flex-direction: column;
@@ -246,6 +311,150 @@ footer {
        object-fit: cover;
     width: 100%;
     height: 87vh;
+  }
+  .principale2 .principale__img {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .principale2 .wrapper.active {
+    width: 110%;
+    height: 105%;
+    transform: scale(1);
+  }
+  .principale2 .wrapper {
+    width: 110%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s, ease;
+    position: absolute;
+  }
+  .principale2 .wrapper .name-field {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    width: 75%;
+    height: 575px;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  .principale2 .wrapper .name-field__check input {
+    margin-bottom: 5px;
+  }
+  .principale2 .wrapper .name-field__btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .principale2 .wrapper .name-field__btn input {
+    color: white;
+    background-color: red;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .principale2 .wrapper .name-field__close {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+  }
+  .principale2 .wrapper .name-field__personnel {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  .principale2 .wrapper .name-field__personnel label {
+    margin-bottom: 7px;
+  }
+  .principale2 .wrapper .name-field__personnel input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+  }
+  .principale2 .wrapper .name-field__radiobtn {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .principale2 .wrapper .name-field__radiobtn label {
+    margin-bottom: 7px;
+  }
+  footer {
+    color: red;
+    font-weight: bold;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .principale {
+    display: none;
+  }
+  .nav__menu {
+    display: none;
+  }
+  header .nav__logo span {
+    color: red;
+    font-size: 35px;
+  }
+  header .nav__logo span img {
+    width: 33px;
+    height: 25px;
+  }
+  .principale2 {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 85px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .principale2__description {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    color: rgb(0, 0, 0);
+  }
+  .principale2__description .texte {
+    align-items: center;
+    justify-content: center;
+  }
+  .principale2__description .texte h1 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .principale2__description .texte .imgbtn {
+    text-align: center;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    height: 40px;
+  }
+  .principale2__description .texte img {
+    border-radius: 7px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 30vh;
   }
   .principale2 .principale__img {
     opacity: 1;
