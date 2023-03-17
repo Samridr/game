@@ -91,6 +91,7 @@ header{
         
     }
 }
+ 
 
 // fin du header
 .principale2{
@@ -145,6 +146,51 @@ header{
             // box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         }
 
+}
+}
+
+// message de remerciement 
+.confirm{
+    padding-inline: 85px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+.inscription-box {
+    
+    width: 400px;
+    height: 575px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .inscripbtn{
+        margin-top: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+        background-color: red;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        width: 170px;
+        height: 40px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
+    p {
+    font-size: 34px;
+    font-weight: bold;
+ }
 }
 }
 .wrapper.active{
@@ -681,4 +727,8 @@ footer{
   
 .dsp-none{
     display: none;
+}
+
+.dsp-flex{
+    display: flex;
 }
