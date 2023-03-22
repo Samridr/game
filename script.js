@@ -36,6 +36,10 @@ const nomError = document.getElementById("nom-error");
 const emailError = document.getElementById("email-error");
 const dateNaissError = document.getElementById("dateNaiss-error");
 const nbrPartError = document.getElementById("nbrPart-error");
+const cityRadios = form.querySelectorAll('input[name="city"]');
+const cityError = document.querySelector('#city-error');
+const conditionsCheckbox = form.querySelector('input[name="conditions"]');
+const conditionsError = document.querySelector('#condition-error');
 
 
 form.addEventListener("submit", function(event) {
@@ -120,10 +124,31 @@ if (dateNaissInput.value.trim() === "") {
 
   
   // Valider la sélection de la ville
-  let selectedCity = form.querySelector('input[name="city"]:checked');
+  let selectedCity = false;
+  for (let radio of cityRadios) {
+    if (radio.checked) {
+      selectedCity = true;
+      break;
+    }
+  }
   if (!selectedCity) {
-    form.querySelector('.name-field__radiobtn').classList.add("error-message");
+    cityError.textContent = 'Veuillez sélectionner au moins une ville.';
+    cityError.classList.add("error-message");
     formIsValid = false;
+  } else {
+    cityError.textContent = "Champ valide";
+    cityError.classList.add("correct");
+    cityError.classList.remove("error-message");
+  }
+
+  if (!conditionsCheckbox.checked) {
+    conditionsError.textContent = 'Veuillez accepter les conditions d\'utilisation.';
+    conditionsError.classList.add("error-message");
+    formIsValid = false;
+  } else {
+    conditionsError.textContent = "Champ valide";
+    conditionsError.classList.add("correct");
+    conditionsError.classList.remove("error-message");
   }
 
   console.log(formIsValid);

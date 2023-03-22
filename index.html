@@ -81,7 +81,7 @@
               
                   <div class="name-field__radiobtn">
                       <label for="participation">A quelle tournoi souhaitez-vous participer cette année</label><br>
-                      <input type="radio" name="city" required>
+                      <input type="radio" name="city" >
                       <label for="newyork">New-york</label>
                       <input type="radio" name="city">
                       <label for="Sanfancisco">San-fancisco</label>
@@ -92,12 +92,13 @@
                       <input type="radio" name="city">
                       <label for="Boston">Boston</label>
                       <input type="radio" name="city">
-                      <label for="Portland">Portland</label>
-                      <span class="error-message" id="prenom-error"></span>
+                      <label for="Portland">Portland</label><br>
+                      <span class="error-message" id="city-error"></span>
                   </div>
                   <div class="name-field__check">
-                      <input type="checkbox" required>
+                      <input type="checkbox" name="conditions">
                       <label for="conditions">J'ai lu et accepté les conditions d'utilisations</label><br>
+                      <span class="error-message" id="condition-error"></span><br>
                       <input type="checkbox">
                       <label for="evenement">Je souhaite être prevenu des prochains évenements</label>
                   </div>
