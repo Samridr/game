@@ -21,6 +21,7 @@
       {
         "nested-interactive": "off"
       }
-    ]
+    ],
+    "detect-css-reflows/layout": "off"
   }
 }

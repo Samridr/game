@@ -11,6 +11,16 @@ body {
   overflow-x: hidden;
 }
 
+span.error-message {
+  color: red;
+  border-color: red;
+}
+
+.correct {
+  color: #00ff00;
+  border-color: #00ff00;
+}
+
 header {
   display: flex;
   justify-content: center;

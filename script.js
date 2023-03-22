@@ -7,15 +7,6 @@ const sec2 = document.querySelector('.principale2');
 const valide = document.querySelector('#partie');
 const confirm = document.querySelector('.confirm');
 
-// valide.addEventListener('click', ()=> {
-//  let erreur = false;
-
-
- 
- 
-
-// })
-
 
 
 btnPopup.forEach(button => button.addEventListener('click', ()=> {
@@ -55,40 +46,41 @@ form.addEventListener("submit", function(event) {
   // Validate prenom
   if (prenomInput.value.trim() === "") {
     prenomError.textContent = "Le prénom est obligatoire";
-    prenomError.style.color = "red";
-    prenomInput.style.borderColor = "red";
-    
+    prenomError.classList.add("error-message");
     formIsValid = false;
   } else if (prenomInput.value.trim().length < 3) {
     prenomError.textContent = "Le prénom doit avoir plus de 3 caractères";
-    prenomError.style.color = "red";
-    prenomInput.style.borderColor = "red";
+    prenomError.classList.add("error-message");
     formIsValid = false;
   } else if (/\d/.test(prenomInput.value)) {
     prenomError.textContent = "Le prénom ne doit pas contenir de chiffre";
-    prenomError.style.color = "red";
-    prenomInput.style.borderColor = "red";
+    prenomError.classList.add("error-message");
     formIsValid = false;
-  
-
+  } else {
+    prenomError.textContent = "Champ valide";
+    prenomError.classList.add("correct");
+    prenomError.classList.remove("error-message");
   }
+  
 
   // Validate nom
   if (nomInput.value.trim() === "") {
     nomError.textContent = "Le nom est obligatoire";
-    nomError.style.color = "red";
-    nomInput.style.borderColor = "red";
+    nomError.classList.add("error-message");
     formIsValid = false;
   } else if (nomInput.value.trim().length < 3) {
     nomError.textContent = "Le nom doit avoir plus de 3 caractères";
-    nomError.style.color = "red";
-    nomInput.style.borderColor = "red";
+    nomError.classList.add("error-message");
     formIsValid = false;
   } else if (/\d/.test(nomInput.value)) {
     nomError.textContent = "Le nom ne doit pas contenir de chiffre";
-    nomError.style.color = "red";
-    nomInput.style.borderColor = "red";
+    nomError.classList.add("error-message");
     formIsValid = false;
+  }
+  else {
+    nomError.textContent = "Champ valide";
+    nomError.classList.add("correct");
+    nomError.classList.remove("error-message");
   }
 
   //Validate email
@@ -96,32 +88,41 @@ form.addEventListener("submit", function(event) {
 const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
 if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
 emailError.textContent = "Veuillez saisir une adresse email valide";
-emailError.style.color = "red";
-emailInput.style.borderColor = "red";
+emailError.classList.add("error-message");
 formIsValid = false;
+}else {
+  emailError.textContent = "Champ valide";
+  emailError.classList.add("correct");
+  emailError.classList.remove("error-message");
 }
 
 // Validate dateNaiss
 if (dateNaissInput.value.trim() === "") {
     dateNaissError.textContent = "La date de naissance est obligatoire";
-    dateNaissError.style.color = "red";
-    dateNaissInput.style.borderColor = "red";
+    dateNaissError.classList.add("error-message");
     formIsValid = false;
+  }else {
+    dateNaissError.textContent = "Champ valide";
+    dateNaissError.classList.add("correct");
+    dateNaissError.classList.remove("error-message");
   }
   
   // Validate nbrPart
   if (nbrPartInput.value.trim() === "" || nbrPartInput.value < 0) {
     nbrPartError.textContent = "Le nombre de tournoi est obligatoire et doit être supérieur ou égal à 0";
-    nbrPartError.style.color = "red";
-    nbrPartInput.style.borderColor = "red";
+    nbrPartError.classList.add("error-message");
     formIsValid = false;
+  }else {
+    nbrPartError.textContent = "Champ valide";
+    nbrPartError.classList.add("correct");
+    nbrPartError.classList.remove("error-message");
   }
 
   
   // Valider la sélection de la ville
   let selectedCity = form.querySelector('input[name="city"]:checked');
   if (!selectedCity) {
-    form.querySelector('.name-field__radiobtn').style.borderColor = "red";
+    form.querySelector('.name-field__radiobtn').classList.add("error-message");
     formIsValid = false;
   }
 
